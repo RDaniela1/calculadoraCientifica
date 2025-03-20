@@ -2,7 +2,11 @@ package Calculadora;
 
 public class calculadoraDiseño extends javax.swing.JFrame {
 
-    
+    private boolean igual,inicio = true,operacion1,operacion2;
+    private double a,b,c,memoria = 0,resultado,valor1,valor2;
+    private String cadena,funciones,tipoOperaciones;
+    private Object jLabel2_Principal;
+
     public calculadoraDiseño() {
         initComponents();
     }
@@ -763,7 +767,13 @@ public class calculadoraDiseño extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("9");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"9");
+}      
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -787,59 +797,229 @@ public class calculadoraDiseño extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
-        // TODO add your handling code here:
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("7");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"7");
+}        
     }//GEN-LAST:event_jButton32ActionPerformed
 
     private void jButton33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton33ActionPerformed
-        // TODO add your handling code here:
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("8");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"8");
+}        
     }//GEN-LAST:event_jButton33ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
-        // TODO add your handling code here:
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("4");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"4");
+}     
     }//GEN-LAST:event_jButton37ActionPerformed
 
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
-        // TODO add your handling code here:
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("5");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"5");
+}     
     }//GEN-LAST:event_jButton38ActionPerformed
 
     private void jButton39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton39ActionPerformed
-        // TODO add your handling code here:
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("6");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"6");
+}       
     }//GEN-LAST:event_jButton39ActionPerformed
 
     private void jButton40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton40ActionPerformed
-        
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("1");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"1");
+}       
     }//GEN-LAST:event_jButton40ActionPerformed
 
     private void jButton41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton41ActionPerformed
-        // TODO add your handling code here:
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("3");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"3");
+}      
     }//GEN-LAST:event_jButton41ActionPerformed
 
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
-        // TODO add your handling code here:
+if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("2");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"2");
+}      
     }//GEN-LAST:event_jButton42ActionPerformed
 
     private void jButton34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton34ActionPerformed
-        // TODO add your handling code here:
+igual = true;
+inicio = true;
+if(operacion1 = true){
+   valor1 = Double.parseDouble(jLabel2.getText());
+   jLabel1.setText("");
+   jLabel1.setText(jLabel2.getText()+ "/");
+   operacion1 = false;
+}else{
+if(operacion2 == true){
+   valor1 = Double.parseDouble(jLabel2.getText());
+   jLabel1.setText("");
+   jLabel1.setText(jLabel2.getText()+ "/");
+   operacion2 = false;
+}else{
+   jLabel1.setText(jLabel2.getText()+ "/");
+   Operaciones(resultado,valor2);
+   
+  }
+}
+tipoOperaciones = "/";
     }//GEN-LAST:event_jButton34ActionPerformed
 
     private void jButton36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton36ActionPerformed
-        // TODO add your handling code here:
+if(jLabel2.getText().contains(".")){
+}else{
+jLabel2.setText(jLabel2.getText()+".");
+inicio = false;
+}
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jButton44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton44ActionPerformed
-        // TODO add your handling code here:
+igual = true;
+inicio = true;
+if(operacion1 = true){
+   valor1 = Double.parseDouble(jLabel2.getText());
+   jLabel1.setText("");
+   jLabel1.setText(jLabel2.getText()+ "*");
+   operacion1 = false;
+}else{
+if(operacion2 == true){
+   valor1 = Double.parseDouble(jLabel2.getText());
+   jLabel1.setText("");
+   jLabel1.setText(jLabel2.getText()+ "*");
+   operacion2 = false;
+}else{
+   jLabel1.setText(jLabel2.getText()+ "*");
+   Operaciones(resultado,valor2);
+   
+  }
+}
+tipoOperaciones = "*";
     }//GEN-LAST:event_jButton44ActionPerformed
 
     private void jButton45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton45ActionPerformed
-        // TODO add your handling code here:
+igual = true;
+inicio = true;
+if(operacion1 = true){
+   valor1 = Double.parseDouble(jLabel2.getText());
+   jLabel1.setText("");
+   jLabel1.setText(jLabel2.getText()+ "-");
+   operacion1 = false;
+}else{
+if(operacion2 == true){
+   valor1 = Double.parseDouble(jLabel2.getText());
+   jLabel1.setText("");
+   jLabel1.setText(jLabel2.getText()+ "-");
+   operacion2 = false;
+}else{
+   jLabel1.setText(jLabel2.getText()+ "-");
+   Operaciones(resultado,valor2);
+   
+  }
+}
+tipoOperaciones = "-";
     }//GEN-LAST:event_jButton45ActionPerformed
 
     private void jButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46ActionPerformed
-        // TODO add your handling code here:
+igual = true;
+inicio = true;
+if(operacion1 = true){
+   valor1 = Double.parseDouble(jLabel2.getText());
+   jLabel1.setText("");
+   jLabel1.setText(jLabel2.getText()+ "+");
+   operacion1 = false;
+}else{
+if(operacion2 == true){
+   valor1 = Double.parseDouble(jLabel2.getText());
+   jLabel1.setText("");
+   jLabel1.setText(jLabel2.getText()+ "+");
+   operacion2 = false;
+}else{
+   jLabel1.setText(jLabel2.getText()+ "+");
+   Operaciones(resultado,valor2);
+   
+  }
+}
+tipoOperaciones = "+";
     }//GEN-LAST:event_jButton46ActionPerformed
-
+private void Operaciones(double valor1, double valor2){
+     switch (tipoOperaciones){
+        case "+":
+            resultado = valor1+valor2;
+            jLabel2.setText(resultado + "");
+            valor1 = Double.parseDouble(jLabel2.getText());
+            break;
+        case "-":
+            resultado = valor1-valor2;
+            jLabel2.setText(resultado + "");
+            valor1 = Double.parseDouble(jLabel2.getText());
+            break;
+        case "*":
+            resultado = valor1*valor2;
+            jLabel2.setText(resultado + "");
+            valor1 = Double.parseDouble(jLabel2.getText());
+            break;
+        case "/":
+            if(valor2 == 0){
+               jLabel2.setText("SYNTAX ERROR");
+               break;
+            }else{
+            resultado = valor1/valor2;
+            jLabel2.setText(resultado + "");
+            valor1 = Double.parseDouble(jLabel2.getText());
+            break;
+            }
+   }
+}
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+inicio = true;
+operacion1 = true;
+if(igual = true){
+   if(tipoOperaciones == null){
+   
+   }else{
+     valor2 = Double.parseDouble(jLabel2.getText());
+     jLabel1.setText(jLabel1.getText()+jLabel2.getText());
+     Operaciones(valor1, valor2);
+     igual = false;
+   }
+}else{
+   jLabel1.setText("");
+    Operaciones(valor1, valor2);
+}
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -907,7 +1087,13 @@ public class calculadoraDiseño extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+ if(inicio == true){
+jLabel2.setText("");
+jLabel2.setText("0");
+inicio = false;
+}else{
+jLabel2.setText(jLabel2.getText()+"0");
+}    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
