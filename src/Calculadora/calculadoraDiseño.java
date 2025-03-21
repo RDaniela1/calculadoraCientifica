@@ -694,6 +694,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton43.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton43.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton43.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton43ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton43, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 50, 50));
 
         jButton44.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -1052,18 +1057,48 @@ if(igual = true){
 
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
+        // jp
+        jLabel2.setText("0");
+        jLabel1.setText("");
+        inicio = true;
+        funciones = "";
     }//GEN-LAST:event_jButton28ActionPerformed
 
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
+        // jp
+        jLabel2.setText("0");
+        jLabel1.setText("");
+        inicio = true;
+        funciones = "";
+        operacion1 = true;
+        operacion2 = true;
+        igual = true;
+        resultado = 0;
+        valor1 = 0;
+        valor2 = 0;
     }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
         // TODO add your handling code here:
+        // jp
+        double nu1 = 0, nu2, nu3;
+        nu2 = Double.parseDouble(jLabel2.getText());
+        nu3 = nu1 - nu2;
+        jLabel2.setText(nu3+" ");
+
     }//GEN-LAST:event_jButton30ActionPerformed
 
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         // TODO add your handling code here:
+        // jp
+        valor1 = Double.parseDouble(jLabel2.getText());
+        if(valor1>=0) {
+            jLabel1.setText("sqrt("+valor1+")");
+            jLabel2.setText(Math.sqrt(valor1)+" ");
+        } else{
+            jLabel2.setText("ERROR");
+        }
     }//GEN-LAST:event_jButton31ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -1080,6 +1115,11 @@ if(igual = true){
 
     private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
         // TODO add your handling code here:
+        // jp
+        valor2 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText(jLabel1.getText()+jLabel2.getText());
+        jLabel2.setText(valor1*(valor2/100)+" ");
+        igual = true;
     }//GEN-LAST:event_jButton35ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
@@ -1095,6 +1135,14 @@ inicio = false;
 jLabel2.setText(jLabel2.getText()+"0");
 }    
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
+        // jp
+        // TODO add your handling code here:
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText("reciproc("+valor1+")");
+        jLabel2.setText(1/valor1+" ");
+    }//GEN-LAST:event_jButton43ActionPerformed
 
     /**
      * @param args the command line arguments
