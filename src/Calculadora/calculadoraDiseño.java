@@ -3,12 +3,13 @@ package Calculadora;
 public class calculadoraDiseño extends javax.swing.JFrame {
 
     private boolean igual,inicio = true,operacion1,operacion2;
-    private double a,b,c,memoria = 0,resultado,valor1,valor2;
+    private double a,b,c, cos, acos, sin, asin, tan, atan, memoria = 0,resultado,valor1,valor2;
     private String cadena,funciones,tipoOperaciones;
     private Object jLabel2_Principal;
 
     public calculadoraDiseño() {
         initComponents();
+        Label_Memoria.setVisible(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -19,24 +20,25 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        Label_Memoria = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Sin = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        Tan = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        Cos = new javax.swing.JButton();
+        arcose = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
+        arcsin = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
@@ -45,7 +47,7 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton23 = new javax.swing.JButton();
         jButton24 = new javax.swing.JButton();
         jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
+        arctan = new javax.swing.JButton();
         jButton27 = new javax.swing.JButton();
         jButton28 = new javax.swing.JButton();
         jButton29 = new javax.swing.JButton();
@@ -66,9 +68,9 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton44 = new javax.swing.JButton();
         jButton45 = new javax.swing.JButton();
         jButton46 = new javax.swing.JButton();
+        sexages = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        radianes = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,6 +82,9 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("0");
 
+        Label_Memoria.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Label_Memoria.setText("M");
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 180, 157));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -89,24 +94,33 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 681, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(45, 45, 45))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(45, 45, 45))
+                .addComponent(Label_Memoria, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(169, 169, 169))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Label_Memoria, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, -1));
+        Label_Memoria.getAccessibleContext().setAccessibleDescription("");
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 130));
 
         jPanel2.setBackground(new java.awt.Color(46, 57, 81));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -141,20 +155,20 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         });
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, 50, 50));
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 180, 157));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton4.setText("Sin");
-        jButton4.setBorder(null);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        Sin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Sin.setForeground(new java.awt.Color(0, 180, 157));
+        Sin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        Sin.setText("Sin");
+        Sin.setBorder(null);
+        Sin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Sin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        Sin.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        Sin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                SinActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 50, 50));
+        jPanel2.add(Sin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 50, 50));
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 180, 157));
@@ -171,20 +185,20 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         });
         jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 50, 50));
 
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 180, 157));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton6.setText("Tan");
-        jButton6.setBorder(null);
-        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        Tan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Tan.setForeground(new java.awt.Color(0, 180, 157));
+        Tan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        Tan.setText("Tan");
+        Tan.setBorder(null);
+        Tan.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Tan.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        Tan.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        Tan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                TanActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 50, 50));
+        jPanel2.add(Tan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 50, 50));
 
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton7.setForeground(new java.awt.Color(0, 180, 157));
@@ -261,35 +275,35 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         });
         jPanel2.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 50, 50));
 
-        jButton12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton12.setForeground(new java.awt.Color(0, 180, 157));
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton12.setText("Cos");
-        jButton12.setBorder(null);
-        jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton12.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        Cos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Cos.setForeground(new java.awt.Color(0, 180, 157));
+        Cos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        Cos.setText("Cos");
+        Cos.setBorder(null);
+        Cos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Cos.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        Cos.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        Cos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                CosActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 50, 50));
+        jPanel2.add(Cos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 50, 50));
 
-        jButton13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(0, 180, 157));
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton13.setText("Cos-1");
-        jButton13.setBorder(null);
-        jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton13.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
+        arcose.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        arcose.setForeground(new java.awt.Color(0, 180, 157));
+        arcose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        arcose.setText("Cos-1");
+        arcose.setBorder(null);
+        arcose.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        arcose.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        arcose.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        arcose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
+                arcoseActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 50, 50));
+        jPanel2.add(arcose, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 50, 50));
 
         jButton14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton14.setForeground(new java.awt.Color(0, 180, 157));
@@ -326,20 +340,20 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton16.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
         jPanel2.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 50, 50));
 
-        jButton17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton17.setForeground(new java.awt.Color(0, 180, 157));
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton17.setText("Sin-1");
-        jButton17.setBorder(null);
-        jButton17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton17.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton17.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
+        arcsin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        arcsin.setForeground(new java.awt.Color(0, 180, 157));
+        arcsin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        arcsin.setText("Sin-1");
+        arcsin.setBorder(null);
+        arcsin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        arcsin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        arcsin.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        arcsin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
+                arcsinActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 50, 50));
+        jPanel2.add(arcsin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 50, 50));
 
         jButton18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton18.setForeground(new java.awt.Color(0, 180, 157));
@@ -431,20 +445,20 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         });
         jPanel2.add(jButton25, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 50, 50));
 
-        jButton26.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton26.setForeground(new java.awt.Color(0, 180, 157));
-        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton26.setText("Tan-1");
-        jButton26.setBorder(null);
-        jButton26.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton26.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
-        jButton26.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
-        jButton26.addActionListener(new java.awt.event.ActionListener() {
+        arctan.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        arctan.setForeground(new java.awt.Color(0, 180, 157));
+        arctan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        arctan.setText("Tan-1");
+        arctan.setBorder(null);
+        arctan.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        arctan.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
+        arctan.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        arctan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26ActionPerformed(evt);
+                arctanActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton26, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 50, 50));
+        jPanel2.add(arctan, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 50, 50));
 
         jButton27.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton27.setForeground(new java.awt.Color(0, 180, 157));
@@ -746,6 +760,16 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         });
         jPanel2.add(jButton46, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, 50, 50));
 
+        buttonGroup1.add(sexages);
+        sexages.setSelected(true);
+        sexages.setText("Sexages");
+        sexages.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sexagesActionPerformed(evt);
+            }
+        });
+        jPanel2.add(sexages, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+
         jButton1.setBackground(new java.awt.Color(46, 57, 81));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 180, 157));
@@ -758,13 +782,9 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 120, 40));
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Sexages");
-        jPanel2.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
-
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Radianes");
-        jPanel2.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
+        buttonGroup1.add(radianes);
+        radianes.setText("Radianes");
+        jPanel2.add(radianes, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 710, 520));
 
@@ -778,27 +798,44 @@ jLabel2.setText("9");
 inicio = false;
 }else{
 jLabel2.setText(jLabel2.getText()+"9");
-}      
+}  
+    // jp
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    // * BOTON DE SENO
+    private void SinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SinActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        funciones = "sin";
+        Trigonometria();
+    }//GEN-LAST:event_SinActionPerformed
+    // * BOTON DE ARCOSENO
+    private void arcoseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arcoseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        funciones = "acos";
+        Trigonometria();
+    }//GEN-LAST:event_arcoseActionPerformed
+    // * BOTON DE ARCSENO
+    private void arcsinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arcsinActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17ActionPerformed
-
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        funciones = "asin";
+        Trigonometria();
+    }//GEN-LAST:event_arcsinActionPerformed
+    // * BOTON DE ARCTANGENTE
+    private void arctanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arctanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton26ActionPerformed
+        funciones = "atan";
+        Trigonometria();
+    }//GEN-LAST:event_arctanActionPerformed
 
+    // * BOTON DE RETROCESO
+    // jp
     private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
         // TODO add your handling code here:
+        if (jLabel2.getText().length() > 0) {
+            jLabel2.setText(jLabel2.getText().substring(0, jLabel2.getText().length() - 1));
+        } if (jLabel2.getText().length() == 0) {
+            jLabel2.setText("0");
+            inicio = true;
+        }
     }//GEN-LAST:event_jButton27ActionPerformed
 
     private void jButton32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton32ActionPerformed
@@ -1007,6 +1044,11 @@ private void Operaciones(double valor1, double valor2){
             valor1 = Double.parseDouble(jLabel2.getText());
             break;
             }
+            // FUNCION DE POTENCIA DE UN NUMERO
+            case "potencia":
+            resultado = Math.pow(valor1, valor2);
+            jLabel2.setText(resultado + "");
+            break;
    }
 }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -1026,14 +1068,122 @@ if(igual = true){
     Operaciones(valor1, valor2);
 }
     }//GEN-LAST:event_jButton3ActionPerformed
+    // * METODOS TRIGONOMETRICOS
+    // jp
+    public void Trigonometria(){
+        if (sexages.isSelected()) {
+            switch (funciones) {
+                // CASO SENO
+                case "sin":
+                    valor1 = Double.parseDouble(jLabel2.getText());
+                    jLabel1.setText("sin("+valor1+")");
+                    sin = Math.sin(Math.PI * valor1 / 180);
+                    jLabel2.setText(sin + " ");
+                    break;
+                // SENO INVERSO
+                case "asin":
+                    valor1 = Double.parseDouble(jLabel2.getText());
+                    jLabel1.setText("asin("+valor1+")");
+                    asin = Math.asin(valor1) * 180 / Math.PI;
+                    jLabel2.setText(asin + " ");
+                    break;
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+                // CASO COSENO
+                case "cos":
+                    valor1 = Double.parseDouble(jLabel2.getText());
+                    jLabel1.setText("cos("+valor1+")");
+                    cos = Math.cos(Math.PI * valor1 / 180);
+                    jLabel2.setText(cos + " ");
+                    break;
+                // COSENO INVERSO
+                case "acos":
+                    valor1 = Double.parseDouble(jLabel2.getText());
+                    jLabel1.setText("acos("+valor1+")");
+                    acos = Math.acos(valor1) * 180 / Math.PI;
+                    jLabel2.setText(acos + " ");
+                    break;
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+                // CASO TANGENTE
+                case "tan":
+                    valor1 = Double.parseDouble(jLabel2.getText());
+                    jLabel1.setText("tan("+valor1+")");
+                    tan = Math.tan(Math.PI * valor1 / 180);
+                    jLabel2.setText(tan + " ");
+                    break;
+                // TANGENTE INVERSA
+                case "atan":
+                    valor1 = Double.parseDouble(jLabel2.getText());
+                    jLabel1.setText("atan("+valor1+")");
+                    atan = Math.atan(valor1) * 180 / Math.PI;
+                    jLabel2.setText(atan + " ");
+                    break;
+            }
+        }
+
+        else {
+            if (radianes.isSelected()) {
+                switch (funciones) {
+                    // CASO SENO
+                    case "sin":
+                        valor1 = Double.parseDouble(jLabel2.getText());
+                        jLabel1.setText("sinr("+valor1+")");
+                        sin = Math.sin(valor1);
+                        jLabel2.setText(sin + " ");
+                        break;
+                    // SENO INVERSO
+                    case "asin":
+                        valor1 = Double.parseDouble(jLabel2.getText());
+                        jLabel1.setText("asinr("+valor1+")");
+                        asin = Math.asin(valor1);
+                        jLabel2.setText(asin + " ");
+                        break;
+    
+                    // CASO COSENO
+                    case "cos":
+                        valor1 = Double.parseDouble(jLabel2.getText());
+                        jLabel1.setText("cosr("+valor1+")");
+                        cos = Math.cos(valor1 );
+                        jLabel2.setText(cos + " ");
+                        break;
+                    // COSENO INVERSO
+                    case "acos":
+                        valor1 = Double.parseDouble(jLabel2.getText());
+                        jLabel1.setText("acosr("+valor1+")");
+                        acos = Math.acos(valor1);
+                        jLabel2.setText(acos + " ");
+                        break;
+    
+                    // CASO TANGENTE
+                    case "tan":
+                        valor1 = Double.parseDouble(jLabel2.getText());
+                        jLabel1.setText("tanr("+valor1+")");
+                        tan = Math.tan(valor1 );
+                        jLabel2.setText(tan + " ");
+                        break;
+                    // TANGENTE INVERSA
+                    case "atan":
+                        valor1 = Double.parseDouble(jLabel2.getText());
+                        jLabel1.setText("atanr("+valor1+")");
+                        atan = Math.atan(valor1) ;
+                        jLabel2.setText(atan + " ");
+                        break;
+                }
+            }
+        }
+    } 
+    // * BOTON DE COSENO
+    // jp
+    private void CosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+        funciones = "cos";
+        Trigonometria();
+    }//GEN-LAST:event_CosActionPerformed
+    // * BOTON DE TANGENTE
+    private void TanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TanActionPerformed
+        // TODO add your handling code here:
+        funciones = "tan";
+        Trigonometria();
+    }//GEN-LAST:event_TanActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
@@ -1055,6 +1205,7 @@ if(igual = true){
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    // * BOTON DE BORRADO
     private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
         // TODO add your handling code here:
         // jp
@@ -1064,6 +1215,7 @@ if(igual = true){
         funciones = "";
     }//GEN-LAST:event_jButton28ActionPerformed
 
+    // * BOTON DE BORRADO TOTAL
     private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
         // TODO add your handling code here:
         // jp
@@ -1079,6 +1231,7 @@ if(igual = true){
         valor2 = 0;
     }//GEN-LAST:event_jButton29ActionPerformed
 
+    // * BOTON DE CAMBIO DE SIGNO
     private void jButton30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton30ActionPerformed
         // TODO add your handling code here:
         // jp
@@ -1089,6 +1242,7 @@ if(igual = true){
 
     }//GEN-LAST:event_jButton30ActionPerformed
 
+    // * BOTON DE RAIZ CUADRADA
     private void jButton31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton31ActionPerformed
         // TODO add your handling code here:
         // jp
@@ -1101,18 +1255,36 @@ if(igual = true){
         }
     }//GEN-LAST:event_jButton31ActionPerformed
 
+    // * BOTON DE PI 
+    // jp
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        jLabel1.setText("PI ");
+        jLabel2.setText(Math.PI+" ");
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    // * BOTON ELEVAR A LA -1
+    // jp
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText(valor1+"^"+"-1");
+        jLabel2.setText(Math.pow(valor1,-1)+" ");
     }//GEN-LAST:event_jButton18ActionPerformed
 
+    // * BOTON QUE ELEVA A UN NUMERO
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
+        inicio = true;
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText(valor1+"^");
+        tipoOperaciones = "potencia";
+        operacion1 =  false;
+        igual = true;
+
     }//GEN-LAST:event_jButton25ActionPerformed
 
+    // * BOTON DE PORCENTAJE
     private void jButton35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton35ActionPerformed
         // TODO add your handling code here:
         // jp
@@ -1136,6 +1308,7 @@ jLabel2.setText(jLabel2.getText()+"0");
 }    
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    // * BOTON DE DIVISION
     private void jButton43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton43ActionPerformed
         // jp
         // TODO add your handling code here:
@@ -1143,6 +1316,10 @@ jLabel2.setText(jLabel2.getText()+"0");
         jLabel1.setText("reciproc("+valor1+")");
         jLabel2.setText(1/valor1+" ");
     }//GEN-LAST:event_jButton43ActionPerformed
+
+    private void sexagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexagesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sexagesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1180,17 +1357,21 @@ jLabel2.setText(jLabel2.getText()+"0");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cos;
+    private javax.swing.JLabel Label_Memoria;
+    private javax.swing.JButton Sin;
+    private javax.swing.JButton Tan;
+    private javax.swing.JButton arcose;
+    private javax.swing.JButton arcsin;
+    private javax.swing.JButton arctan;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
@@ -1200,7 +1381,6 @@ jLabel2.setText(jLabel2.getText()+"0");
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
@@ -1215,7 +1395,6 @@ jLabel2.setText(jLabel2.getText()+"0");
     private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
@@ -1224,7 +1403,6 @@ jLabel2.setText(jLabel2.getText()+"0");
     private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton46;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -1232,7 +1410,7 @@ jLabel2.setText(jLabel2.getText()+"0");
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton radianes;
+    private javax.swing.JRadioButton sexages;
     // End of variables declaration//GEN-END:variables
 }
