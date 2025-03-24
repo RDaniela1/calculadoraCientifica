@@ -328,6 +328,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton15.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton15.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 50, 50));
 
         jButton16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -338,6 +343,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton16.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton16.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 50, 50));
 
         arcsin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -378,6 +388,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton19.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton19.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 50, 50));
 
         jButton20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -388,6 +403,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton20.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton20.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton20.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 370, 50, 50));
 
         jButton21.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -398,6 +418,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton21.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton21.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton21.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 50, 50));
 
         jButton22.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -408,6 +433,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton22.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton22.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton22.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton22, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 50, 50));
 
         jButton23.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -418,6 +448,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton23.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton23.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton23.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton23, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 50, 50));
 
         jButton24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -428,6 +463,11 @@ public class calculadoraDiseño extends javax.swing.JFrame {
         jButton24.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton24.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_dark.png"))); // NOI18N
         jButton24.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/btn1_pressed_dark.png"))); // NOI18N
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton24, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 50, 50));
 
         jButton25.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -1049,6 +1089,18 @@ private void Operaciones(double valor1, double valor2){
             resultado = Math.pow(valor1, valor2);
             jLabel2.setText(resultado + "");
             break;
+            
+         case "raizx":
+            if(valor2 <=0){
+            jLabel2.setText("Error ");
+             break;
+         }else{
+            jLabel1.setText(valor2 + "yroot");
+            a = 1;
+            c = a/valor2;
+            jLabel2.setText(Math.pow(valor1, c)+ " ");
+            break;
+       }      
    }
 }
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -1186,23 +1238,27 @@ if(igual = true){
     }//GEN-LAST:event_TanActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        memoria = 0;
+        Label_Memoria.setVisible(false);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        jLabel2.setText(memoria + " ");
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        memoria = Double.parseDouble(jLabel2.getText());
+        Label_Memoria.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+        memoria = memoria + Double.parseDouble(jLabel2.getText());
+        Label_Memoria.setVisible(true);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        memoria = memoria - Double.parseDouble(jLabel2.getText());
+        Label_Memoria.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     // * BOTON DE BORRADO
@@ -1295,7 +1351,8 @@ if(igual = true){
     }//GEN-LAST:event_jButton35ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
+        jLabel1.setText("E ");
+        jLabel2.setText(Math.E +" ");
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -1320,6 +1377,63 @@ jLabel2.setText(jLabel2.getText()+"0");
     private void sexagesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexagesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sexagesActionPerformed
+
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText("sqr(" +valor1+ ") ");
+        jLabel2.setText(Math.pow(valor1, 2)+ " ");
+    }//GEN-LAST:event_jButton23ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        inicio = true;
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText(valor1 + "yroot");
+        tipoOperaciones = "raizx";
+        operacion1 = false;
+        igual = true;
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText("cube( "+ valor1 +" ) ");
+        jLabel2.setText(Math.pow(valor1, 3)+ " ");
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        valor1 = Double.parseDouble(jLabel2.getText());
+        a = 1;
+        b = 3;
+        c= a/b;
+        jLabel1.setText("cuberoot ("+ valor1 +") ");
+        jLabel2.setText(Math.pow(valor1, c)+ " ");
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText("powten(" +valor1+ ") ");
+        jLabel2.setText(Math.pow(10, valor1)+ " ");
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel2.setText(Math.exp(valor1) + " ");
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText("log(" +valor1+ ") ");
+        jLabel2.setText(Math.log(valor1)+ " ");
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        a = 1;
+        valor1 = Double.parseDouble(jLabel2.getText());
+        jLabel1.setText("fact( "+ valor1 +" ) ");
+        for (b = 1;b <= valor1; b++){
+            a = a*b;
+        }
+        jLabel2.setText(a+ " ");
+    }//GEN-LAST:event_jButton15ActionPerformed
 
     /**
      * @param args the command line arguments
